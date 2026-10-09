@@ -1,5 +1,9 @@
 # Personal Portfolio
 
+## Live Website
+
+[View my portfolio](https://ephraimlex.github.io/PersonalPortfolio/)    
+
 A responsive, single-page portfolio built with React and Vite.
 It presents my software development studies, engineering background,
 skills, and projects.
