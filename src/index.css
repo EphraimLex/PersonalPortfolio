@@ -1,0 +1,74 @@
+/* Include padding and borders within an element's specified size. */
+* {
+  box-sizing: border-box;
+}
+
+/* Define shared colours so they are easy to update later. */
+:root {
+  --background: #f4f6f8;
+  --surface: #ffffff;
+  --text: #222222;
+  --accent: #245a46;
+  --border: #d8e0dc;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* Remove the browser's default outer spacing. */
+body {
+  margin: 0;
+}
+
+/* Set consistent heading spacing and line height. */
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Keep consistent spacing between paragraphs and lists. */
+p {
+  margin: 0 0 16px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+/* Allow long links, such as email addresses, to wrap on small screens. */
+a {
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+/* Make keyboard navigation clearly visible. */
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}

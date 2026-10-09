@@ -1,0 +1,194 @@
+/* Centre the page content and limit its width on large screens. */
+.site-header,
+main,
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Arrange the portfolio title and navigation in a flexible row. */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Display navigation links in a row that can wrap when needed. */
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-header nav li + li {
+  margin-top: 0;
+}
+
+.site-header nav a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+/* Separate the main sections with space and a subtle border. */
+main > section {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Give the introduction more space and a comfortable reading width. */
+main > .introduction {
+  padding: 64px 0;
+}
+
+.introduction p {
+  max-width: 700px;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: var(--accent);
+}
+
+/* Style the project link as a button. */
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #193f31;
+}
+
+/* Show three skill groups side by side on desktop screens. */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Show two project cards per row on desktop and tablet screens. */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Give skill groups and projects a consistent card appearance. */
+.skills-grid > div,
+.project-card {
+  padding: 24px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.project-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Separate education entries without adding space inside each entry. */
+#education article + article {
+  margin-top: 28px;
+}
+
+#education article p {
+  margin-bottom: 6px;
+}
+
+/* Place copyright information and the back-to-top link in a row. */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Tablet layout: place navigation below the title and use two skill columns. */
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile layout: stack cards and reduce spacing and heading sizes. */
+@media (max-width: 600px) {
+  .site-header,
+  main,
+  .site-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  main > section {
+    padding: 32px 0;
+  }
+
+  main > .introduction {
+    padding: 40px 0;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* Space project links apart and allow wrapping on small screens. */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
